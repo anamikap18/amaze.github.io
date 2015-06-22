@@ -1,0 +1,473 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>Annu bbc</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style type="text/css">
+
+    body{
+        margin: 0;
+        font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+    }
+
+    #topbar{
+         background-color: #ffffff;
+         width: 100%;
+         height: 40px;
+         color:  #404040;
+    }
+
+    .fixedwidth{
+        width: 1050px;
+        margin: 0 auto;
+    }
+
+    #logodiv{
+        padding-top: 5px;
+        float: left;
+        border-right: 1px solid #dcdcdc;
+        padding-right: 8px;
+
+    }  
+
+    #signindiv{
+        font-weight: bold;
+        padding: 6px 80px 10px 14px;
+        border-right: 1px solid #dcdcdc;
+        font-size: 0.9em;
+        float: left;
+
+    } 
+    
+    #signindiv img{
+        position: relative;
+        top: 3px;
+    }
+
+    #topmenudiv{
+        float: left;
+        
+    }
+
+    #topmenudiv ul{
+        margin: 0;
+        padding: 0;
+    }
+
+    #topmenudiv li{
+        list-style: none;
+        font-weight: bold;
+        font-size: .9em;
+        border-right: 1px solid #dcdcdc;
+        height: 100%;
+        padding: 10px 20px 12px 20px;
+        float: left;
+    }
+    
+    #searchdiv{
+        float: left;
+        padding: 8px 0 0 10px;
+       
+    }
+   #searchdiv input{
+         background-color: #e4e4e4;
+         background-image: url("images/magnify.png");
+         background-repeat: no-repeat;
+         background-position: right center;
+         height: 20px;
+         border: none;
+         padding-left: 7px;
+         font-size: .9em;
+   }
+
+   .break{
+    clear: both;
+   }
+
+    #newsbar{
+         background-color: #bb1919;
+         width: 100%;
+         height: 55px;
+         color: #ffffff;
+    }
+
+    #newsbar img{
+        margin: 0;
+        padding: 0;
+        padding-top: 10px;
+        
+    }
+
+    #topicmenu{
+        background-color: #a91717;
+         width: 100%;
+         height: 36px;
+     } 
+
+    #topicmenu li.menuhome {
+        padding: 10px 15px 10px 0px;
+        border-right: 1px solid #bb1919;
+        margin: 0px;
+    }
+    
+    #topicmenu ul{
+        margin: 0;
+        padding: 0;
+    }  
+
+    #topicmenu li{
+        list-style: none;
+        float: left;
+        color: #ffffff;
+        padding: 10px 15px 10px 15px;
+        border-right: 1px solid #bb1919;
+        font-size: .9em;
+    }
+
+   #topicmenu li.topicselect{
+    	border-bottom: 5px solid #ffffff;
+    	padding-bottom: 6px;
+    }
+   
+    
+    #subtopic{
+       background-color: #ffffff;
+        width: 100%;
+        height: 35px;
+     } 
+
+    #subtopic ul{
+        margin: 0;
+        padding: 0;
+    }  
+
+    #subtopic li{
+        list-style: none;
+        float: left;
+        color: black;
+        padding: 6px 14px 6px 14px;
+        border-right: 1px solid #dcdcdc;
+        font-size: .9em;
+        font-weight: 300%;
+    } 
+
+    #subtopic li.selected{
+    	 font-size: 1.3em;
+         padding-top: 3px !important;
+         padding-left: 0px;
+         padding-bottom: 2px;
+         border-bottom: 4px solid #a91717;
+    }
+
+    #content{
+    	width: 100%;
+    	color: black;
+    }
+    
+    h1{
+    	font-size: 2em;
+    	letter-spacing: -1px;
+    	padding: 0px;
+    	margin-bottom: 3px;
+     }
+
+     .newsitem{
+     	  color: #5a5a5a;
+     	  width: 280px;
+ 	 	  float: left;
+      	  font-weight: lighter;
+  		  font-size: .9em;
+  		  letter-spacing: .2px;
+  		  line-height: 125%;
+     }
+
+    .time{
+    	font-size: .85em;
+    	background-image: url("images/clockimg.png");
+        background-repeat: no-repeat;
+        background-position: left center;
+        padding-left: 20px;
+        margin-top: 8px;
+
+    }
+
+    .category{
+    	color: #bb1919;
+    }
+
+    .links{
+    	  line-height: 150%;
+     }
+
+    .newsitem a{
+       	text-decoration: none;
+       	color: black;
+     }
+
+     .newsitem a:hover{
+     	color: #117EC5;
+     }
+
+    .video{
+     	background-image: url("images/arrow.png");
+        background-repeat: no-repeat;
+        background-position: left center;
+        padding-left: 20px;
+    } 
+
+    .headerimage{
+
+        float: left;
+        position: relative;
+     	left: 10px;
+     	top: 15px;
+     	height: 250px;
+     	width: 390px;
+
+     }
+
+    #watchlisten{
+     	background-color: #ffffff;
+     	float: right;
+     	height: 800px;
+     	width: 340px;
+     	position: relative;
+        top: -47px;
+        border-left: 1px solid #DDDDDD;
+        padding-left: 15px;
+
+     }
+
+    h2{
+       margin: 5px 0 12px 10px;
+       font-weight: normal;
+       font-size: 1.4em;
+     }
+
+   .live{
+   	   background-image: url("images/livelogo.png");
+        background-repeat: no-repeat;
+        background-position: left center;
+        padding-left: 65px;
+        color: #117EC5;
+        font-weight: thick;
+   }
+
+   .wlitem{
+   	height:70px;
+   }
+
+   .wlimg{
+   	float: left;
+   }
+
+   .wltext{
+   	float:right;
+   	position: relative;
+   	left: 10px;
+   	top:-14px;
+   	width: 220px;
+   }
+
+   h3{
+   	font-size: 1em;
+   	margin-bottom: 4px;
+   }
+
+
+   </style>
+
+ </head>
+
+ <body>
+
+    <div id="container">
+
+        <div id="topbar">
+
+            <div class="fixedwidth">
+
+                <div id="logodiv">
+
+                   <img src="images/bbclogo.png" />
+
+                </div>
+
+                <div id="signindiv">
+
+                   <img src="images/signin.png" />Sign in
+
+                </div>
+
+                <div id="topmenudiv">
+
+                    <ul>
+                        <li>News</li>
+                        <li>Sport</li>
+                        <li>Weather</li>
+                        <li>Shop</li>
+                        <li>Earth</li>
+                        <li>Travel</li>
+                        <li>More..</li>
+
+                    </ul>
+                </div>
+
+                <div id="searchdiv">
+                    
+                    <input type="text" placeholder="Search" />
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="break"> </div>
+
+        <div id="newsbar">
+          
+             <div class="fixedwidth">
+
+             <img src="images/newslogo.png"  height="30px" />
+            
+             </div>
+            
+        </div>
+
+        <div class="break"></div>
+
+        <div id="topicmenu">
+
+             <div class="fixedwidth">
+
+             <ul>
+                 <li class="menuhome">Home</li>
+                 <li>Video</li>
+                 <li>World</li>
+                 <li>US & Canada</li>
+                 <li class="topicselect">UK</li>
+                 <li>Business</li>
+                 <li>Tech</li>
+                 <li>Science</li>
+                 <li>Magazine</li>
+                 <li>Entertainment & Arts</li>
+                 <li>Health</li>
+                 <li style="border-right:none">More..</li>
+              </ul>
+
+            </div>
+            
+        </div>
+
+        <div class="break"></div>
+
+        <div id="subtopic">
+
+             <div class="fixedwidth">
+
+             <ul>
+             	<li class="selected">UK</li>
+             	<li>England</li>
+             	<li>N. Ireland</li>
+             	<li>Scotland</li>
+             	<li>Wales</li>
+             	<li style="border-right:none">Politics</li>
+             </ul>
+
+             </div>
+        </div>
+
+        <div class="break"></div>
+
+        <div id="content">
+
+        	<div class="fixedwidth">
+
+        	<h1>Ex-boyfriend in court over baby death</h1>
+
+        	<div class="newsitem">
+
+	        	<p>The ex-boyfriend and father of a heavily pregnant woman appears in court charged with child destruction and causing GBH after the mother-to -be is attacked.
+	        	</p>
+            
+                <p class="time"> 8 hours ago | 
+                <span class="category">London</span>
+                </p>
+
+
+                <p class="links">
+                <a class="video" href="">Man in court for 'child destruction'</a><br/>
+                <a class="video" href="">Baby death crime</a><br />
+                <a href="">Heinous crime</a>
+
+                </p>
+
+            </div>
+
+             <img class="headerimage" src="images/headerimage.jpg"/>
+
+             <div id="watchlisten">
+                
+                <h2>Watch/Listen</h2>
+
+                <p class="live">BBC Radio 5 Live</p>
+
+                <div class="wlitem">
+
+                  <img src="images/pic1.png" / class="wlimg">
+                	
+                    <div class="wltext">
+
+	                    <h3>Muslims 'buying in' to IS prejudices</h3>
+
+	                    <p class="time">8 hours ago</p>
+                  	
+                    </div>
+
+                </div>
+
+                <div class="break"></div>
+
+                <div class="wlitem">
+
+                  <img src="images/pic2.png" / class="wlimg">
+                	
+                    <div class="wltext">
+
+                        <h3>IS smuggler 'got families to Syria</h3>
+
+                        <p class="time">19 June 2015</p>
+
+                  	</div>
+
+                </div>
+
+                <div class="break"></div>
+
+                <div class="wlitem">
+
+                  <img src="images/pic3.png" / class="wlimg">
+                	
+                    <div class="wltext">
+
+                        <h3>Driving instructor 'asleep' in learner car</h3>
+
+                        <p class="time">19 June 2015</p>
+
+                  	</div>
+
+                </div>
+
+            </div>
+
+        </div>
+        
+    </div>
+
+</body>
+</html>
